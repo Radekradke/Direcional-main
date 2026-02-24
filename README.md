@@ -1,3 +1,1 @@
-﻿# Direcional
-
-https://radekradke.github.io/Direcional/
+https://radekradke.github.io/Direcional-main/
