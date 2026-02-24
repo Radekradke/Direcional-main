@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartamentos à Venda na Zona Norte | Direcional Imóveis</title>
+    <meta name="description" content="Encontre seu apartamento ideal na Zona Norte do Rio com condições facilitadas. UNIQ Condomínio Clube, Nova Caxias, Conquista e mais.">
+    
+    <!-- Preload da imagem principal do Hero para Performance -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/552121345000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <img src="img/wpp.svg" alt="WhatsApp" class="whatsapp-icon">
+        <span class="whatsapp-tooltip">Fale conosco!</span>
+    </a>
+
+    <!-- Header Premium -->
+    <header id="mainHeader">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Direcional Imóveis" class="logo-img logo-scrolledlogo-img logo-scrolled">
+                <img src="img/logobranco.png" alt="Direcional Imóveis" class="logo-img logo-default">
+            </a>
+            
+            <nav class="main-nav" id="mainNav" aria-label="Navegação Principal">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Início</a></li>
+                    <li><a href="#properties" class="nav-link">Empreendimentos</a></li>
+                    <li><a href="#benefits" class="nav-link">Benefícios</a></li>
+                    <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contact" class="btn-cta-header">
+                    <img src="img/wpp.svg" alt="WhatsApp" class="btn-icon-svg">
+                    Entre em Contato
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação Mobile">
+        <div class="mobile-nav-header">
+            <span class="mobile-nav-logo">Menu</span>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Fechar Menu">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-nav-link">Início</a></li>
+            <li><a href="#properties" class="mobile-nav-link">Empreendimentos</a></li>
+            <li><a href="#benefits" class="mobile-nav-link">Benefícios</a></li>
+            <li><a href="#testimonials" class="mobile-nav-link">Depoimentos</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contato</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <a href="tel:2121345000" class="mobile-nav-phone">
+                <i class="ph ph-phone"></i>
+                (21) 2134-5000
+            </a>
+        </div>
+    </nav>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true">
+        <div class="gallery-overlay" id="galleryOverlay"></div>
+        <div class="gallery-content">
+            <button class="gallery-close" id="galleryClose" aria-label="Fechar Galeria">
+                <i class="ph ph-x"></i>
+            </button>
+            
+            <div class="gallery-header">
+                <h3 id="galleryTitle">Nome do Empreendimento</h3>
+                <span id="galleryLocation" class="gallery-location">
+                    <i class="ph ph-map-pin"></i> Localização
+                </span>
+            </div>
+            
+            <div class="gallery-slider" id="gallerySlider" aria-live="polite">
+                <div class="gallery-track" id="galleryTrack">
+                    <!-- Images injected by JS -->
+                </div>
+            </div>
+            
+            <div class="gallery-nav">
+                <button class="gallery-btn gallery-prev" id="galleryPrev" aria-label="Imagem Anterior">
+                    <i class="ph ph-caret-left"></i>
+                </button>
+                <div class="gallery-dots" id="galleryDots"></div>
+                <button class="gallery-btn gallery-next" id="galleryNext" aria-label="Próxima Imagem">
+                    <i class="ph ph-caret-right"></i>
+                </button>
+            </div>
+            
+            <div class="gallery-thumbnails" id="galleryThumbnails" role="tablist">
+                <!-- Thumbnails injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section - Redesign Premium -->
+        <section class="hero" id="hero">
+            <!-- Background com elementos decorativos -->
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            
+            <!-- Elementos decorativos -->
+            <div class="hero-decoration hero-decoration-1"></div>
+            <div class="hero-decoration hero-decoration-2"></div>
+            
+            <!-- Conteúdo Principal -->
+            <div class="hero-content">
+                <!-- Seção de Texto -->
+                <div class="hero-text">
+                    <!-- Badge Premium -->
+                    <span class="hero-badge">
+                        <i class="ph ph-building"></i>
+                        40+ Anos de Experiência em Engenharia
+                    </span>
+                    
+                    <!-- Headline Impactante -->
+                    <h1 class="hero-title">Realize seu sonho da casa própria</h1>
+                    
+                    <!-- Descrição -->
+                    <p class="hero-description">
+                        Descubra nossos 10+ empreendimentos na Zona Norte do Rio com condições especiais de financiamento e localização privilegiada.
+                    </p>
+                    
+                    <!-- Stats com Grid -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Famílias Felizes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Anos de Mercado</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Satisfação</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Trust Badge -->
+                    <div class="hero-trust">
+                        <div class="trust-badge">
+                            <i class="ph ph-medal"></i>
+                            <span>99% de clientes recomendam nossos imóveis</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Principal -->
+                    <a href="#properties" class="btn-hero btn-hero-primary">
+                        <span>Explorar Empreendimentos</span>
+                        <i class="ph ph-arrow-down"></i>
+                    </a>
+                </div>
+
+                <!-- Formulário Flutuante Premium -->
+                <div class="hero-form-section">
+                    <div class="hero-form-card">
+                        <div class="form-card-header">
+                            <div class="form-card-icon">
+                                <img src="img/D.png" alt="Direcional" class="form-card-logo">
+                            </div>
+                            <h3>Fale com um Especialista</h3>
+                        </div>
+                        
+                        <p class="form-card-subtitle">
+                            Tire suas dúvidas e conheça nossas melhores condições
+                        </p>
+                        
+                        <a href="https://wa.me/552121345000" class="btn-whatsapp-form" target="_blank" rel="noopener noreferrer">
+                            <img src="img/wpp.svg" alt="WhatsApp" class="whatsapp-form-icon">
+                            <span>Conversar no WhatsApp</span>
+                        </a>
+                        
+                        <div class="form-card-divider"></div>
+                        
+                        <p class="form-card-phone">
+                            <i class="ph ph-phone"></i>
+                            (21) 2134-5000
+                        </p>
+                        
+                        <p class="form-card-note">
+                            Resposta em até 2 horas úteis
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!-- Properties Carousel -->
+        <section class="properties" id="properties">
+            <div class="section-header">
+                <span class="section-tag">Nossos empreendimentos</span>
+                <h2 class="section-title">Encontre o imóvel dos seus sonhos</h2>
+            </div>
+
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Anterior">
+                    <i class="ph ph-caret-left"></i>
+                </button>
+                
+                <div class="carousel-track" id="propertiesCarousel" role="list">
+                    <!-- Properties injected by JS -->
+                </div>
+
+                <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Próximo">
+                    <i class="ph ph-caret-right"></i>
+                </button>
+
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits" id="benefits">
+            <div class="section-header">
+                <span class="section-tag">Por que escolher a gente</span>
+                <h2 class="section-title">Experiência premium em cada detalhe</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph ph-map-pin"></i>
+                    </div>
+                    <h3>Localização Estratégica</h3>
+                    <p>Empreendimentos em áreas de alta valorização na Zona Norte do Rio e Baixada Fluminense.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph ph-currency-dollar"></i>
+                    </div>
+                    <h3>Condições Facilitadas</h3>
+                    <p>Financiamento facilitado com parcelas que cabem no seu bolso e entrada facilitada.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph ph-hammer"></i>
+                    </div>
+                    <h3>Qualidade de Construção</h3>
+                    <p>Mais de 40 anos de experiência e padrão premium de acabamento em todos os empreendimentos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph ph-shield-check"></i>
+                    </div>
+                    <h3>Segurança e Infraestrutura</h3>
+                    <p>Condomínios completos com segurança 24h, áreas de lazer e infraestrutura completa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O que dizem nossos clientes</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Consegui meu apê com parcelas que cabem no bolso. Atendimento excelente do início ao fim da compra."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CE</div>
+                        <div class="author-details">
+                            <span class="author-name">Carlos Eduardo</span>
+                            <span class="author-location">Proprietário - Nova Caxias UP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Apaixonada pelo apartamento. A entrega foi antes do prazo e o acabamento superou todas as expectativas."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FS</div>
+                        <div class="author-details">
+                            <span class="author-name">Fernanda Silva</span>
+                            <span class="author-location">Proprietária - UNIQ Condomínio Clube</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Financiamento aprovado rapidinho. A Direcional facilitou muito a realização do meu sonho da casa própria."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RP</div>
+                        <div class="author-details">
+                            <span class="author-name">Robson Paulo</span>
+                            <span class="author-location">Proprietário - Conquista Parque Iguaçu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="cta-final" id="contact">
+            <div class="cta-content">
+                <h2>Seu novo apartamento pode estar a um clique</h2>
+                <p>Receba agora mesmo as melhores ofertas para seu perfil.</p>
+                <button class="btn btn-primary" style="max-width: 300px;" id="ctaFinalBtn">
+                    <img src="img/wpp.svg" alt="WhatsApp" class="btn-icon-svg">
+                    Receber ofertas personalizadas
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Map Modal -->
+    <div class="modal" id="mapModal" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle" aria-hidden="true">
+        <div class="modal-overlay" id="mapOverlay"></div>
+        <div class="modal-content map-modal-content">
+            <button class="modal-close" id="mapClose" aria-label="Fechar Mapa">
+                <i class="ph ph-x"></i>
+            </button>
+            <h3 id="mapModalTitle">Localização</h3>
+            <div class="map-container" id="mapContainer"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                      <img src="img/logobranco.png" alt="Direcional Imóveis" class="logo-img">
+                </a>
+                <p>Há mais de 40 anos realizando o sonho da casa própria no Rio de Janeiro e Baixada Fluminense.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#properties">Empreendimentos</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="ph ph-map-pin"></i> Av. Ernani Cardoso, 345 - Olaria, Rio de Janeiro - RJ</p>
+                <p><i class="ph ph-phone"></i> (21) 2134-5000</p>
+                <p><i class="ph ph-envelope"></i> contato@direcionalimoveis.com.br</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Direcional Imóveis. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
